@@ -18,13 +18,16 @@
 - [x] VendingMachine 을 ChangeModule로 변경한다.
 - [x] 동전은 500원, 100원, 50원, 10원이 있다.
 - [ ] 최소 개수의 동전으로 잔돈을 돌려준다.
+	- [ ] 10원이 남아 있다면 10원 동전 1개를 돌려준다.
+	- [ ] 50원이 남아 있다며 50원 동전 1개를 돌려준다.
+	- [ ] 650원이 남아 있다면 500원 동전 1개, 100원 동전 1개, 50원 동전 1개를 돌려준다
+	- [ ] 1000원이 남아 있다면 500원 동전 2개를 돌려준다.
 - [ ] 최소 구입 금액 미만인 경우 잔돈이 반환된다.
 - [ ] 반환 요청을 하는 경우 잔돈이 반환된다.
 
 ---
 
 - ChangeModule
-- ChangeModule#pop(Drink)
-	- ChangeModule#withDraw(Money)\
+- ChangeModule#withDraw(Money)
 - Coin(500원, 100원, 50원, 10원)
-- Change
+- Changes(잔돈)
