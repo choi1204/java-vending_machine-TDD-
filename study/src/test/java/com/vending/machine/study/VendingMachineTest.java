@@ -38,8 +38,7 @@ class VendingMachineTest {
 
     @Test
     void _1000원이_들어있는_자판기에_500원을_넣으면_1500원이_들어있음을_알_수_있다() {
-        VendingMachine vendingMachine = new VendingMachine();
-        vendingMachine.put(1000);
+        VendingMachine vendingMachine = new VendingMachine(1000);
         vendingMachine.put(500);
         assertThat(vendingMachine.getChanges()).isEqualTo(1500);
     }

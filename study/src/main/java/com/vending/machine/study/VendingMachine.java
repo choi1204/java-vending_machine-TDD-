@@ -2,13 +2,20 @@ package com.vending.machine.study;
 
 public class VendingMachine {
 
-    private int change;
+    private int changes;
 
-    public void put(final int change) {
-        this.change += change;
+    public void put(final int changes) {
+        this.changes += changes;
     }
 
     public int getChanges() {
-        return change;
+        return changes;
+    }
+
+    public VendingMachine() {
+        this.changes = 0;
+    }
+    public VendingMachine(final int changes) {
+        this.changes = changes;
     }
 }
