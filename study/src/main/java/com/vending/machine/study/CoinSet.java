@@ -1,0 +1,17 @@
+package com.vending.machine.study;
+
+import java.util.Arrays;
+import java.util.List;
+
+public enum  CoinSet {
+
+    _500_COIN(500), _100_COIN(100), _50_COIN(50), _10_COIN(10);
+
+    int value;
+
+    CoinSet(int value) {
+        this.value = value;
+    }
+
+
+}
