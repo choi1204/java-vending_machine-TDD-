@@ -1,17 +1,15 @@
 package com.vending.machine.study;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException;
-import static org.junit.jupiter.api.Assertions.*;
 
 class CoinSetTest {
 
@@ -27,6 +25,17 @@ class CoinSetTest {
         assertThat(coin.value).isEqualTo(value);
     }
 
+    @Test
+    void 동전() {
+        CoinSet coin = CoinSet.valueOf(10);
+        assertThat(coin).isEqualTo(CoinSet._10_COIN);
+    }
+
+    @Test
+    @DisplayName("전체 동전은 높은 금액 순서대로 반환된다")
+    void _1() {
+        assertThat(CoinSet.highestOrder()).containsExactly(CoinSet._500_COIN,CoinSet._100_COIN,CoinSet._50_COIN,CoinSet._10_COIN);
+    }
     static List<Arguments> coinSet() {
         return Arrays.asList(
                 Arguments.of(500, CoinSet._500_COIN),
